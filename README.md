@@ -18,10 +18,10 @@
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| title         | string     | null: false                    |
-| text          | text       | null: false                    |
+| movie_title   | string     | null: false                    |
+| thought       | text       | null: false                    |
 | genre_id      | integer    | null: false                    |
-| evaluation_id | integer    | null: false                    |
+| evaluation    | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
 
 ### Association

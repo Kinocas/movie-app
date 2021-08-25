@@ -8,7 +8,7 @@
     <ul class="list-left">
       <li><%= link_to "チャットルーム", "", class:"chat-room"%></li>
       <% if user_signed_in?%>
-        <li><%= link_to "新規作成", "#", class:"new-movie" %></li>
+        <li><%= link_to "新規作成", new_movie_path, class:"new-movie" %></li>
       <% end %>
     </ul>
     <ul class='lists-right'>

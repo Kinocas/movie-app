@@ -30,7 +30,7 @@
   list-style: none;
   width: 200px;
 }
-.chat-room, .new-move, .user-nickname,
+.chat-room, .new-movie, .user-nickname,
 .logout, .login, .sign-up{
   text-decoration: none;
 }
