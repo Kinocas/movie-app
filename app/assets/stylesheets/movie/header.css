@@ -1,0 +1,36 @@
+.main-header{
+  height: 200px;
+  width: 100%;
+  background-color: thistle;
+  
+}
+.header-top{
+  height: 50%;
+  text-align: center;
+}
+
+.header-bottom{
+  background-color: red;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-left{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 250px;
+}
+
+.lists-right{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 200px;
+}
+.chat-room, .new-move, .user-nickname,
+.logout, .login, .sign-up{
+  text-decoration: none;
+}

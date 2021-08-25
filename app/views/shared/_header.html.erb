@@ -1,14 +1,14 @@
 <header class = "main-header">
   <div class="header-top">
     <div class = "header-title">
-      <h1>MoveApp</h1>
+      <h1>MovieApp</h1>
     </div>
   </div>
   <div class="header-bottom">
     <ul class="list-left">
       <li><%= link_to "チャットルーム", "", class:"chat-room"%></li>
       <% if user_signed_in?%>
-        <li><%= link_to "新規作成", "#", class:"new-move" %></li>
+        <li><%= link_to "新規作成", "#", class:"new-movie" %></li>
       <% end %>
     </ul>
     <ul class='lists-right'>
