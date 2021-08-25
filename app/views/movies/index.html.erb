@@ -1,5 +1,39 @@
 <%= render partial:"shared/header" %>
 
-<div>
+<div class = movie-index>
+  <div class = "side-bar">
+    <div>
+      検索欄
+    </div>
+    <div>
+      ジャンル検索
+    </div>
+  </div>
+  <div class = "movie-contents">
+    <ul class = "movie-lists">
+      <% @movies.each do |movie|%>
+        <li class= "movie-list">
+          <%= link_to movie_path(movie) do%>
+            <div class = "movie-title">
+              <%= movie.movie_title%>
+            </div>
+            <div class = 'movie-img-content'>
+              <%= image_tag movie.image, class:"movie-img"%>
+            </div>
+            <div class = "movie-evaluation">
+              <%= movie.evaluation%>
+            </div>
+            <div class = "movie-genre">
+              <%= movie.genre.name %>
+            </div>
+            <div class="movie-thought">
+              <%= movie.thought%>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
+
 

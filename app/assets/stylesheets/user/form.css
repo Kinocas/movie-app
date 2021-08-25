@@ -31,6 +31,7 @@
   height: 40px;
   font-size: 17px;
   padding: 5px 10px;
+  border: 1px solid black;
 }
 .submit-btn{
   text-align: center;
@@ -40,4 +41,6 @@
 .submit-btn-text{
   font-size: 20px;
   padding: 2px 30px;
+  background-color: grey;
+  color: white;
 }

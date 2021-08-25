@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
+    @movies = Movie.includes(:user)
   end
 
   def new
@@ -15,6 +16,10 @@ class MoviesController < ApplicationController
     else
       render :new
     end 
+  end
+
+  def show
+    @movie = Movie.find(params[:id])
   end
 
   private
