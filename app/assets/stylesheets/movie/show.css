@@ -1,0 +1,15 @@
+.movie-show{
+  display: flex;
+  height: calc(100vh - 200px);
+  overflow: scroll;
+  background-color: wheat;
+}
+.movie-box{
+  width: 50%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.detail-movie-img{
+  width: 60%;
+}

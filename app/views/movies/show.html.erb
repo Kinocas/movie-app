@@ -1,0 +1,33 @@
+<%= render partial:"shared/header" %>
+
+<div class = "movie-show">
+  <div class = "movie-box">
+    <div class = "detail-movie">
+      <%= @movie.movie_title %>
+    </div>
+    <div class = "detail-movie">
+      <%= image_tag @movie.image, class:"detail-movie-img"%>
+    </div>
+    <div class = "detail-movie">
+      <%= @movie.evaluation%>
+    </div>
+    <div class = "detail-movie">
+      <%= @movie.genre.name %>
+    </div>
+    <div class="detail-movie">
+      <%= @movie.thought%>
+    </div>
+
+    <% if user_signed_in? && current_user.id == @movie.user_id%>
+      <ul>
+        <li>
+          <%= link_to "編集", "#"%>
+        </li>
+        <li>
+          <%= link_to "削除", "#"%>
+        </li>
+      </ul>
+    <% end %>
+
+  <div>
+</div>
