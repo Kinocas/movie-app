@@ -1,0 +1,12 @@
+.form-header{
+  width: 100%;
+  background-color: #FFFFBB;
+  height: 100px;
+  text-align: center;
+  padding-top: 20px;
+}
+.form-header-title{
+  font-size: 40px;
+  text-decoration: none;
+  color: #777777;
+}

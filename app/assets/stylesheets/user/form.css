@@ -1,0 +1,43 @@
+.registration-main{
+  background-color: #FFFFBB;
+  display: flex;
+  justify-content: center;
+}
+.form-wrap{
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.form-header-text{
+  text-align: center;
+}
+
+.form-group{
+  width: 70%;
+  margin: 30px auto;
+}
+.form-text-wrap{
+  margin-bottom: 15px;
+}
+.indispensable{
+  background-color: red;
+  font-weight: bolder;
+  color: white;
+  padding: 5px;
+}
+.input-default{
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  padding: 5px 10px;
+}
+.submit-btn{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.submit-btn-text{
+  font-size: 20px;
+  padding: 2px 30px;
+}
