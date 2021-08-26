@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.includes(:user)
+    @movies = Movie.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -39,6 +39,10 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.destroy
     redirect_to root_path
+  end
+
+  def search
+    @movies = Movie.search(params[:keyword]).order("created_at DESC")
   end
 
   private

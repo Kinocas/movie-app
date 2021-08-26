@@ -1,24 +1,49 @@
 <header class = "main-header">
-  <div class="header-top">
-    <div class = "header-title">
-      <%= link_to "MovieApp", root_path%>
+  <div class = "main-header-wrap">
+    <div class="header-top">
+      <div class = "header-left">
+        <%= link_to "MovieApp", root_path, class: "header-title"%>
+      </div>
+      <ul class='header-right'>
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li> 
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <% end %>
+      </ul>
     </div>
-  </div>
-  <div class="header-bottom">
-    <ul class="list-left">
-      <li><%= link_to "チャットルーム", "", class:"chat-room"%></li>
-      <% if user_signed_in?%>
-        <li><%= link_to "新規作成", new_movie_path, class:"new-movie" %></li>
-      <% end %>
-    </ul>
-    <ul class='lists-right'>
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
-      <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>
-    </ul>
+    <div class="header-bottom">
+      <ul class="list-left">
+        <% if user_signed_in?%>
+          <li><%= link_to "新規作成", new_movie_path, class:"new-movie" %></li>
+          <li><%= link_to "チャットルーム", "", class:"chat-room"%></li>
+        <% end %>
+      </ul>
+      <div class = "serach-wrap">
+        <% if controller_name == "movies" %>
+          <div class = "search-title">
+            <%= form_with(url: search_movies_path, local: true, method: :get, class: "search-form") do |form| %>
+              <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+              <%= form.submit "検索", class: "search-btn" %>
+            <% end %>
+          </div>
+          <div >
+            ジャンル検索
+          </div>
+        <% elsif controller_name == "users"%>
+          <div class = "search-title">
+            <%= form_with(url: search_user_path(@user), local: true, method: :get, class: "search-form") do |form| %>
+              <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+              <%= form.submit "検索", class: "search-btn" %>
+            <% end %>
+          </div>
+          <div>
+            ジャンル検索
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </header>

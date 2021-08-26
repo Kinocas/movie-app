@@ -1,0 +1,39 @@
+<div class = "movie-contents">
+  <% if (controller.action_name == "index") || (controller.action_name == "search") %>
+    <div class = "movie-contents-title">
+      投稿一覧
+    </div>
+  <% else %>
+    <div class = "movie-contents-title" >
+      <%= @user.nickname %>さんの一覧
+    </div>
+  <% end %>
+
+  <% if movies.empty? %>
+      <div>投稿されたコンテンツがありません</div>
+  <% else %>
+    <ul class = "movie-lists">
+      <% movies.each do |movie| %>
+        <li class= "movie-list">
+          <%= link_to movie_path(movie) do%>
+            <div class = "movie-title">
+              <%= movie.movie_title%>
+            </div>
+            <div class = 'movie-img-content'>
+              <%= image_tag movie.image, class:"movie-img"%>
+            </div>
+            <div class = "movie-evaluation">
+              <%= movie.evaluation%>
+            </div>
+            <div class = "movie-genre">
+              <%= movie.genre.name %>
+            </div>
+            <div class="movie-thought">
+              <%= movie.thought%>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

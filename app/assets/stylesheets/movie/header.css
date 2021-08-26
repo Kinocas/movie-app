@@ -1,20 +1,53 @@
-.main-header{
-  height: 200px;
-  width: 100%;
-  background-color: thistle;
+.header-title,.chat-room, .new-movie, 
+.user-nickname,.logout, .login, .sign-up{
+  text-decoration: none;
   
 }
+.main-header{
+  width: 100%;
+  
+  background-color: rgb(202, 201, 201);
+}
+.main-header-wrap{
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+}
 .header-top{
+  display: flex;
+  justify-content: space-between;
   height: 50%;
-  text-align: center;
+  padding: 5px 15px;
+  background-color: white;
+}
+.header-left{
+  font-size: 25px;
+}
+.header-title{
+  color: black;
+  font-weight: 800;
+  text-shadow: 2px 3px 2px cadetblue;
 }
 
-.header-bottom{
-  background-color: red;
-  height: 50%;
+.header-right{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
+  width: 200px;
+}
+.user-nickname,.logout, .login, .sign-up{
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(40, 95, 197);
+}
+
+.header-bottom{
+  background-color: rgb(245, 180, 180);
+  height: 50%;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .list-left{
@@ -22,15 +55,4 @@
   justify-content: space-between;
   list-style: none;
   width: 250px;
-}
-
-.lists-right{
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  width: 200px;
-}
-.chat-room, .new-movie, .user-nickname,
-.logout, .login, .sign-up{
-  text-decoration: none;
 }
