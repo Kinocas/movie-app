@@ -1,0 +1,64 @@
+<%= form_with model: movie, class: "registration-main", local: true do |f| %>
+  <div class="form-wrap">
+    <div class="form-header">
+      <% if controller.action_name == "new" %>
+        <h1 class="form-header-text">新規作成</h1>
+      <% else %>
+        <h1 class="form-header-text">内容の編集</h1>
+      <% end %>
+    </div>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">タイトル</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :movie_title, class:"input-default", id:"movie_title", placeholder:"例) ハリーポッター", maxlength:"40", autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">画像</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.file_field :image, id:"image" %>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">感想</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :thought, class:"input-default", id:"thought", placeholder:"例) 面白かった" %>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">ジャンル</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"input-default", id:"genre"} )%>
+    </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">評価</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.number_field :evaluation, min:0, max: 5, step: 0.1, class:"input-default", id:"evaluation" ,placeholder:"3.5"%>
+    </div>
+
+    <% if controller.action_name == "new" %>
+      <div class="submit-btn">
+        <%= f.submit "新規作成" , class:"submit-btn-text" %>
+      </div>
+    <% else %>
+      <div class="submit-btn">
+        <%= f.submit "変更する" , class:"submit-btn-text" %>
+      </div>
+    <% end %>
+    
+  </div>
+<% end %>
