@@ -1,12 +1,6 @@
 .header-title,.chat-room, .new-movie, 
 .user-nickname,.logout, .login, .sign-up{
   text-decoration: none;
-  
-}
-.main-header{
-  width: 100%;
-  
-  background-color: rgb(202, 201, 201);
 }
 .main-header-wrap{
   width: 80%;
@@ -55,4 +49,25 @@
   justify-content: space-between;
   list-style: none;
   width: 250px;
+  align-items: center;
+}
+.chat-room, .new-movie{
+  color: black;
+  background-color: white;
+  padding: 5px 15px;
+  border: 1px solid black;
+}
+.serach-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-title{
+  margin-right: 30px;
+}
+.search-input{
+  padding: 5px 15px;
+  background-color: white;
+  border: 1.5px solid black;
+  border-radius: 5px;
 }
