@@ -15,21 +15,26 @@
     <ul class = "movie-lists">
       <% movies.each do |movie| %>
         <li class= "movie-list">
-          <%= link_to movie_path(movie) do%>
+          <%= link_to movie_path(movie) ,class: "movie-list-link" do %>
             <div class = "movie-title">
-              <%= movie.movie_title%>
+              <%= movie.movie_title %>
             </div>
             <div class = 'movie-img-content'>
               <%= image_tag movie.image, class:"movie-img"%>
             </div>
             <div class = "movie-evaluation">
+              <span class = "movie-list-item">評価：</span>
               <%= movie.evaluation%>
             </div>
             <div class = "movie-genre">
+              <span class = "movie-list-item">ジャンル：</span>
               <%= movie.genre.name %>
             </div>
             <div class="movie-thought">
-              <%= movie.thought%>
+              <span class = "movie-list-item">感想：</span>
+              <div class="movie-thought-text">
+                <%= movie.thought%>
+              </div>
             </div>
           <% end %>
         </li>

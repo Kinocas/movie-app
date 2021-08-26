@@ -13,19 +13,49 @@
 .movie-lists{
   display: flex;
   flex-wrap: wrap;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .movie-list{
+  background-color: rgb(247, 238, 224);
   margin: 10px;
   padding: 5px;
   width: calc((100% - 100px)/5);
-  height: auto;
+  height: calc((100vh - 100px)/1.5);
   list-style: none;
   border: 1px solid black;
   overflow: scroll;
 }
+.movie-list-link{
+  text-decoration: none;
+}
 .movie-img {
-  width: calc((100vw - 300px - (16 * (10px + 5px)))/6);
-
+  width: 100%;
+}
+.movie-title{
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px 15px;
+}
+.movie-evaluation{
+  color: rgb(182, 182, 0);
+  padding: 5px 10px;
+}
+.movie-genre{
+  color: rgb(109, 108, 108);
+  padding: 5px 10px;
+}
+.movie-thought{
+  color: black;
+  padding: 5px 10px;
+}
+.movie-thought-text{
+  border: 1px solid rgb(168, 168, 168);
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+}
+.movie-list-item{
+  font-size: 12px;
 }
