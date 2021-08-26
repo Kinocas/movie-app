@@ -1,33 +1,42 @@
 <%= render partial:"shared/header" %>
 
-<div class = "movie-show">
-  <div class = "movie-box">
-    <div class = "detail-movie">
-      <%= @movie.movie_title %>
+<div class = "movie-detail-wrap">
+  <div class = "movie-detail-title">
+    <%= @movie.movie_title %>
+  </div>
+  <div class= "movie-detail-content">
+    <div class = "movie-detail-img-box">
+      <%= image_tag @movie.image, class:"movie-detail-img"%>
     </div>
-    <div class = "detail-movie">
-      <%= image_tag @movie.image, class:"detail-movie-img"%>
-    </div>
-    <div class = "detail-movie">
-      <%= @movie.evaluation%>
-    </div>
-    <div class = "detail-movie">
-      <%= @movie.genre.name %>
-    </div>
-    <div class="detail-movie">
-      <%= @movie.thought%>
-    </div>
-
-    <% if user_signed_in? && current_user.id == @movie.user_id%>
-      <ul>
-        <li>
-          <%= link_to "編集", edit_movie_path(@movie) %>
-        </li>
-        <li>
-          <%= link_to "削除", movie_path(@movie), method: :delete %>
-        </li>
-      </ul>
-    <% end %>
-
-  <div>
+    <table class = "movie-detail-table">
+      <tbody >
+        <tr>
+          <th class="detail-item">投稿者</th>
+          <td class="detail-value"><%= @movie.user.nickname%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">評価</th>
+          <td class="detail-value"><%= @movie.evaluation%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ジャンル</th>
+          <td class="detail-value"><%= @movie.genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">感想</th>
+          <td class="detail-value"><%= @movie.thought%></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <% if user_signed_in? && current_user.id == @movie.user_id%>
+    <ul class="edit-destroy-box">
+      <li>
+        <%= link_to "編集", edit_movie_path(@movie), class: "movie-edit-btn"%>
+      </li>
+      <li>
+        <%= link_to "削除", movie_path(@movie), method: :delete, class:"movie-destroy-btn" %>
+      </li>
+    </ul>
+  <% end %>
 </div>
