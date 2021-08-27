@@ -47,6 +47,6 @@ class MoviesController < ApplicationController
 
   private
   def movie_params
-    params.require(:movie).permit(:movie_title, :image, :thought, :genre_id, :evaluation).merge(user_id: current_user.id)
+    params.require(:movie).permit(:movie_title, :image, :image_url, :thought, :genre_id, :evaluation).merge(user_id: current_user.id)
   end 
 end

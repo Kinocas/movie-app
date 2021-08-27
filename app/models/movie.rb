@@ -1,7 +1,7 @@
 class Movie < ApplicationRecord
   with_options presence: true do
     validates :movie_title
-    validates :image
+    #validates :image
     validates :thought
     validates :evaluation
   end

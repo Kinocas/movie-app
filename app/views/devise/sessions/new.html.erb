@@ -1,34 +1,31 @@
 <%= render partial:"shared/form_header"%>
 
-<%= form_with model: @user, url: user_session_path, class: "registration-main", local: true do |f| %>
-  <div class='form-wrap'>
-    <div class='form-header'>
-      <h1 class='form-header-text'>
-        ログイン
-      </h1>
-    </div>
+<%= form_with model: @user, url: user_session_path, class: "user-registration-main", local: true do |f| %>
+  <div class='user-form-header'>
+    <h1 class='user-form-header-text'>
+      ログイン
+    </h1>
+  </div>
 
-    <%= render 'shared/error_messages', model: f.object %>
-  
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">メールアドレス</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
-    </div>
+  <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="form-group">
-      <div class='form-text-wrap'>
-        <label class="form-text">パスワード</label>
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
+  <div class="user-form-group">
+    <div class='user-form-text-wrap'>
+      <label class="user-form-text">メールアドレス</label>
+      <span class="user-indispensable">必須</span>
     </div>
+    <%= f.email_field :email, class:"user-input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
 
-    <div class='submit-btn'>
-      <%= f.submit "ログイン" ,class:"submit-btn-text" %>
+  <div class="user-form-group">
+    <div class='user-form-text-wrap'>
+      <label class="user-form-text">パスワード</label>
+      <span class="user-indispensable">必須</span>
     </div>
+    <%= f.password_field :password, class:"user-input-default", id:"password", placeholder:"" %>
+  </div>
 
+  <div class='user-submit-btn'>
+    <%= f.submit "ログイン" ,class:"user-submit-btn-text" %>
   </div>
 <% end %>

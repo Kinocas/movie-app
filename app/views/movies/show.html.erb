@@ -6,7 +6,11 @@
   </div>
   <div class= "movie-detail-content">
     <div class = "movie-detail-img-box">
-      <%= image_tag @movie.image, class:"movie-detail-img"%>
+      <% if @movie.image.present? %>
+        <%= image_tag @movie.image, class:"movie-detail-img"%>
+      <% else %>
+        <%= image_tag @movie.image_url, class: "movie-detail-img"%>
+      <% end %>
     </div>
     <table class = "movie-detail-table">
       <tbody >

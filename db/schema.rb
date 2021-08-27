@@ -34,10 +34,11 @@ ActiveRecord::Schema.define(version: 2021_08_25_075504) do
   end
 
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "image_url"
     t.string "movie_title", null: false
     t.text "thought", null: false
     t.integer "genre_id", null: false
-    t.integer "evaluation", null: false
+    t.float "evaluation", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

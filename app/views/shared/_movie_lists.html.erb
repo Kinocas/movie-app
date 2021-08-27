@@ -19,8 +19,12 @@
             <div class = "movie-title">
               <%= movie.movie_title %>
             </div>
-            <div class = 'movie-img-content'>
-              <%= image_tag movie.image, class:"movie-img"%>
+            <div class = 'movie-img-box' >
+              <% if movie.image.present? %>
+                <%= image_tag movie.image, class:"movie-img"%>
+              <% else %>
+                <%= image_tag movie.image_url, class: "movie-img"%>
+              <% end %>
             </div>
             <div class = "movie-evaluation">
               <span class = "movie-list-item">評価：</span>
