@@ -1,12 +1,5 @@
 <%= form_with model: movie, class: "movie-registration-main", local: true do |f| %>
-  <div class="movie-form-header">
-    <% if controller.action_name == "new" %>
-      <h1 class="movie-form-header-text">新規作成</h1>
-    <% else %>
-      <h1 class="movie-form-header-text">内容の編集</h1>
-    <% end %>
-  </div>
-
+  
   <%= render 'shared/error_messages', model: f.object %>
 
   <div class="movie-form-group">
@@ -22,9 +15,9 @@
       <label class="movie-form-text">画像</label>
       <span class="movie-indispensable">必須</span>
     </div>
-    <%= f.file_field :image, id:"movie-image" %> 
+    <%= f.file_field :image, class:"movie-image", id:"image" %> 
     <span>or</span>
-    <%= f.text_field :image_url, class:"movie-image-url" , placeholder: "画像 url" %>
+    <%= f.text_field :image_url, class:"movie-image-url" , id:"image-url", placeholder: "画像 url" %>
   </div>
 
   <div class="movie-form-group">

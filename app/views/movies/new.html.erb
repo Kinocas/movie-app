@@ -1,3 +1,7 @@
 <%= render partial:"shared/form_header"%>
 
-<%= render partial:"shared/movie_form", locals: {movie: @movie} %>
+<div class="movie-form-header">
+  <h1 class="movie-form-header-text">新規作成</h1>
+
+  <%= render partial:"shared/movie_form", locals: {movie: @movie} %>
+</div>

@@ -1,5 +1,13 @@
-.movie-contents{
+/*background-color*/
+.movie-contents-background{
   background-color: wheat;
+}
+.user-contents-background{
+  background-color: rgb(188, 228, 255);
+}
+
+/*一覧表示の設定*/
+.movie-contents{
   width: 80%;
   height: calc(100vh - 100px);
   overflow: scroll;

@@ -1,4 +1,9 @@
 <%= render partial:"shared/header" %>
 
-<%= render partial:"shared/movie_lists", locals: {movies: @movies} %>
+<div class = "movie-contents movie-contents-background">
+  <div class = "movie-contents-title">
+    投稿一覧
+  </div>
+  <%= render partial:"shared/movie_lists", locals: {movies: @movies} %>
+</div>
 

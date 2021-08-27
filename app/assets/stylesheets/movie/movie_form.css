@@ -1,12 +1,18 @@
-.movie-registration-main{
+/* newとeditのタイトル */
+.movie-form-header{
   background-color: wheat;
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
-  padding: 30px 100px;
+  padding: 30px 50px;
   border-radius: 100px;
 }
 .movie-form-header-text{
   text-align: center;
+}
+/*newとeditの入力フォーム*/
+.movie-registration-main{
+  width: 80%;
+  margin: 0 auto;
 }
 .movie-form-group{
   margin: 30px 0px;
@@ -35,15 +41,18 @@
   border-radius: 5px;
   background-color: white;
 }
+.movie-image{
+  width: 45%;
+}
 .movie-image-url{
-  width: 40%;
+  width: 45%;
   height: 40px;
   font-size: 17px;
   padding: 5px 10px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 .movie-input-thought{
   width: 100%;

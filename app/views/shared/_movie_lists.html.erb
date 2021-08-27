@@ -1,48 +1,36 @@
-<div class = "movie-contents">
-  <% if (controller.action_name == "index") || (controller.action_name == "search") %>
-    <div class = "movie-contents-title">
-      投稿一覧
-    </div>
-  <% else %>
-    <div class = "movie-contents-title" >
-      <%= @user.nickname %>さんの一覧
-    </div>
-  <% end %>
-
+<ul class = "movie-lists">
   <% if movies.empty? %>
       <div>投稿されたコンテンツがありません</div>
   <% else %>
-    <ul class = "movie-lists">
-      <% movies.each do |movie| %>
-        <li class= "movie-list">
-          <%= link_to movie_path(movie) ,class: "movie-list-link" do %>
-            <div class = "movie-title">
-              <%= movie.movie_title %>
+    <% movies.each do |movie| %>
+      <li class= "movie-list">
+        <%= link_to movie_path(movie) ,class: "movie-list-link" do %>
+          <div class = "movie-title">
+            <%= movie.movie_title %>
+          </div>
+          <div class = 'movie-img-box' >
+            <% if movie.image.present? %>
+              <%= image_tag movie.image, class:"movie-img"%>
+            <% else %>
+              <%= image_tag movie.image_url, class: "movie-img"%>
+            <% end %>
+          </div>
+          <div class = "movie-evaluation">
+            <span class = "movie-list-item">評価：</span>
+            <%= movie.evaluation%>
+          </div>
+          <div class = "movie-genre">
+            <span class = "movie-list-item">ジャンル：</span>
+            <%= movie.genre.name %>
+          </div>
+          <div class="movie-thought">
+            <span class = "movie-list-item">感想：</span>
+            <div class="movie-thought-text">
+              <%= movie.thought%>
             </div>
-            <div class = 'movie-img-box' >
-              <% if movie.image.present? %>
-                <%= image_tag movie.image, class:"movie-img"%>
-              <% else %>
-                <%= image_tag movie.image_url, class: "movie-img"%>
-              <% end %>
-            </div>
-            <div class = "movie-evaluation">
-              <span class = "movie-list-item">評価：</span>
-              <%= movie.evaluation%>
-            </div>
-            <div class = "movie-genre">
-              <span class = "movie-list-item">ジャンル：</span>
-              <%= movie.genre.name %>
-            </div>
-            <div class="movie-thought">
-              <span class = "movie-list-item">感想：</span>
-              <div class="movie-thought-text">
-                <%= movie.thought%>
-              </div>
-            </div>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
   <% end %>
-</div>
+</ul>
