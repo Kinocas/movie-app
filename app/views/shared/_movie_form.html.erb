@@ -1,56 +1,54 @@
-<%= form_with model: movie, class: "movie-registration-main", local: true do |f| %>
-  
-  <%= render 'shared/error_messages', model: f.object %>
+<%= render 'shared/error_messages', model: f.object %>
 
-  <div class="movie-form-group">
-    <div class="movie-form-text-wrap">
-      <label class="movie-form-text">タイトル</label>
-      <span class="movie-indispensable">必須</span>
-    </div>
-    <%= f.text_area :movie_title, class:"movie-input-title", id:"movie_title", placeholder:"例) ハリーポッター", maxlength:"40", autofocus: true %>
+<div class="movie-form-group">
+  <div class="movie-form-text-wrap">
+    <label class="movie-form-text">タイトル</label>
+    <span class="movie-indispensable">必須</span>
   </div>
+  <%= f.text_area :movie_title, class:"movie-input-title", id:"movie_title", placeholder:"例) ハリーポッター", maxlength:"40", autofocus: true %>
+</div>
 
-  <div class="movie-form-group">
-    <div class="movie-form-text-wrap">
-      <label class="movie-form-text">画像</label>
-      <span class="movie-indispensable">必須</span>
-    </div>
-    <%= f.file_field :image, class:"movie-image", id:"image" %> 
-    <span>or</span>
-    <%= f.text_field :image_url, class:"movie-image-url" , id:"image-url", placeholder: "画像 url" %>
+<div class="movie-form-group">
+  <div class="movie-form-text-wrap">
+    <label class="movie-form-text">画像</label>
+    <span class="movie-indispensable">必須</span>
   </div>
+  <%= f.file_field :image, class:"movie-image", id:"image" %> 
+  <span>or</span>
+  <%= f.text_field :image_url, class:"movie-image-url" , id:"image-url", placeholder: "画像 url" %>
+</div>
 
-  <div class="movie-form-group">
-    <div class="movie-form-text-wrap">
-      <label class="movie-form-text">感想</label>
-      <span class="movie-indispensable">必須</span>
-    </div>
-    <%= f.text_area :thought, class:"movie-input-thought", id:"thought", placeholder:"例) 面白かった" %>
+<div class="movie-form-group">
+  <div class="movie-form-text-wrap">
+    <label class="movie-form-text">感想</label>
+    <span class="movie-indispensable">必須</span>
   </div>
+  <%= f.text_area :thought, class:"movie-input-thought", id:"thought", placeholder:"例) 面白かった" %>
+</div>
 
-  <div class="movie-form-group">
-    <div class="movie-form-text-wrap">
-      <label class="movie-form-text">ジャンル</label>
-      <span class="movie-indispensable">必須</span>
-    </div>
-    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"movie-input-genre", id:"genre"} )%>
+<div class="movie-form-group">
+  <div class="movie-form-text-wrap">
+    <label class="movie-form-text">ジャンル</label>
+    <span class="movie-indispensable">必須</span>
   </div>
+  <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"movie-input-genre", id:"genre"} )%>
+</div>
 
-  <div class="movie-form-group">
-    <div class='movie-form-text-wrap'>
-      <label class="movie-form-text">評価</label>
-      <span class="movie-indispensable">必須</span>
-    </div>
-    <%= f.number_field :evaluation, min:0, max: 5, step: 0.1, class:"movie-input-evaluation", id:"evaluation" ,placeholder:"3.5"%>
+<div class="movie-form-group">
+  <div class='movie-form-text-wrap'>
+    <label class="movie-form-text">評価</label>
+    <span class="movie-indispensable">必須</span>
   </div>
+  <%= f.number_field :evaluation, min:0, max: 5, step: 0.1, class:"movie-input-evaluation", id:"evaluation" ,placeholder:"3.5"%>
+</div>
 
-  <% if controller.action_name == "new" %>
-    <div class="movie-submit-btn">
-      <%= f.submit "新規作成" , class:"movie-submit-btn-text" %>
-    </div>
-  <% else %>
-    <div class="movie-submit-btn">
-      <%= f.submit "変更する" , class:"movie-submit-btn-text" %>
-    </div>
-  <% end %>
-<% end %>
+<div class="movie-form-group">
+  <div class='movie-form-text-wrap'>
+    <label class="movie-form-text">公開</label>
+    <span class="movie-indispensable">必須</span>
+  </div>
+  <%= f.radio_button :release, "公開", checked: true, class:"release" %>
+  <%= f.label :release, "公開する", value: "公開", style: "display: inline-block;" %>
+  <%= f.radio_button :release, "非公開", class:"release" %>
+  <%= f.label :release, "公開しない", value: "非公開", style: "display: inline-block;" %>
+</div>

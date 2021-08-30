@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
   before_action :move_to_index, only: [:edit, :update, :destory]
 
   def index
-    @movies = Movie.includes(:user).order("created_at DESC")
+    @movies = Movie.where(release: "公開").includes(:user).order("created_at DESC")
   end
 
   def new
@@ -48,7 +48,7 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit(:movie_title, :image, :image_url, :thought, :genre_id, :evaluation).merge(user_id: current_user.id)
+    params.require(:movie).permit(:movie_title, :image, :image_url, :thought, :genre_id, :evaluation, :release).merge(user_id: current_user.id)
   end 
 
   def set_movie

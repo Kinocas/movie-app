@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_075504) do
     t.text "thought", null: false
     t.integer "genre_id", null: false
     t.float "evaluation", null: false
+    t.string "release", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
