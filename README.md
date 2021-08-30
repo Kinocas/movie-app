@@ -19,6 +19,7 @@
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | movie_title   | string     | null: false                    |
+| image_url     | text       |                                |
 | thought       | text       | null: false                    |
 | genre_id      | integer    | null: false                    |
 | evaluation    | integer    | null: false                    |

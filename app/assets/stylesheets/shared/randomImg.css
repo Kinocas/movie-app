@@ -1,7 +1,7 @@
 #randomImg {
   width: 100vw;
   height: 100vh;
-  background-image: url(https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG48a1HGKn6I9Oc3IR0D7FBHLfbCmk-vHMD8Emr70M7lNnvaHvkZTnd_rnFtec3c7ikCdYv7KYyeUYV60xRYqbSwu9t3aQTcvWDVz_iMLdQ5jl1_EwsXTo8C-fFGPr1b64KPCyhegI00RTxCVaIG3YQ77t-Aj13bFotQATqutokRwkSzRtGYhZaBYdjWXAljoBwrJfN631ShhtLjDM52vmOe6LiDIwklUwBuuFXvVRKfXEYQ438KEpNid5Qyy1vsNUy_49dvoIVBK1aOMuHjUx7c=/320.jpg?errorImage=false); 
+  background-color: cadetblue;
   background-position: center center;
   background-size: cover;
 }
