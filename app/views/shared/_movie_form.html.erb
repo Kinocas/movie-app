@@ -31,7 +31,7 @@
     <label class="movie-form-text">ジャンル</label>
     <span class="movie-indispensable">必須</span>
   </div>
-  <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"movie-input-genre", id:"genre"} )%>
+  <%= f.collection_select(:genre_id, Genre.all, :id, :name, { include_blank: '---'}, {class:"movie-input-genre", id:"genre"} )%>
 </div>
 
 <div class="movie-form-group">

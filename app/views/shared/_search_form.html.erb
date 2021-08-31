@@ -1,0 +1,13 @@
+<%= f.label :movie_title_cont, "タイトル名",class: "search-title"%>
+<%= f.search_field :movie_title_cont ,class: "search-input"%>
+<br>
+<%= f.label :genre_id_eq, 'ジャンル：' ,class: "search-title"%>
+<%= f.collection_select :genre_id_eq, Genre.all, :id, :name, { include_blank: '---'}, {class: "search-genre"}  %>
+<br>
+<%= f.label :evaluation, '評価：' ,class: "search-title"%>
+<%= f.number_field :evaluation_gteq, min:0, max: 5, step: 0.1, class: "search-evaluation search-evaluation-left" %>
+<span>~</span>
+<%= f.number_field :evaluation_lteq, min:0, max: 5, step: 0.1, class: "search-evaluation" %>
+<br>
+
+<%= f.submit '検索' ,class: "search-submit"%>

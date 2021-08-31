@@ -57,17 +57,4 @@
   padding: 5px 15px;
   border: 1px solid black;
 }
-.serach-wrap{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.search-title{
-  margin-right: 30px;
-}
-.search-input{
-  padding: 5px 15px;
-  background-color: white;
-  border: 1.5px solid black;
-  border-radius: 5px;
-}
+

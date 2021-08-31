@@ -7,7 +7,7 @@ function randomImg() {
   const backgroundRandomImag = function(){
     insertImg(getImageArray);
   };
-  setInterval(backgroundRandomImag, 5000);
+  setInterval(backgroundRandomImag, 30000);
 };
 
 function insertImg(getImageArray){

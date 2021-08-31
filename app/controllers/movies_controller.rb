@@ -3,6 +3,7 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_movie, only: [:show, :edit, :update, :destory, :move_to_index]
   before_action :move_to_index, only: [:edit, :update, :destory]
+  before_action :search_movie
 
   def index
     @movies = Movie.where(release: "公開").includes(:user).order("created_at DESC")
@@ -42,7 +43,7 @@ class MoviesController < ApplicationController
   end
 
   def search
-    @movies = Movie.search(params[:keyword]).order("created_at DESC")
+    @movies = @q.result.order("created_at DESC")
   end
 
   private
@@ -63,5 +64,9 @@ class MoviesController < ApplicationController
 
   def get_image_url
     @image_url = Movie.where.not(image_url: "").pluck(:image_url)
+  end
+
+  def search_movie
+    @q = Movie.where(release: "公開").ransack(params[:q])
   end
 end
