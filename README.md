@@ -59,7 +59,7 @@ VSCode
 | thought       | text       | null: false                    |
 | genre_id      | integer    | null: false                    |
 | evaluation    | integer    | null: false                    |
-| release       | integer    | null: false                    |
+| release       | string     | null: false                    |
 | user          | references | null: false, foreign_key: true |
 
 ### Association
