@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :search]
+  before_action :set_user, only: [:show, :search, :get_image_url]
+  before_action :get_image_url
   before_action :search_movie, only: [:show, :search]
 
   def show
@@ -11,6 +12,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def get_image_url
+    @image_url = @user.movies.where.not(image_url: "").pluck(:image_url)
+  end
 
   def set_user
     @user = User.find(params[:id])
