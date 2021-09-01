@@ -69,4 +69,5 @@ class MoviesController < ApplicationController
   def search_movie
     @q = Movie.where(release: "公開").ransack(params[:q])
   end
+
 end

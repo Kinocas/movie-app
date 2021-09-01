@@ -21,6 +21,8 @@
           <li><%= link_to "チャットルーム", "", class:"chat-room"%></li>
         <% end %>
       </ul>
+
+      <div class="movie-count" id="movie-count">合計数</div>
       
       <div class = "search-wrap">
         <div class="search-text" id="search-button">検索欄</div>
@@ -28,12 +30,12 @@
 
           <% if controller_name == "movies" %>
             <%= search_form_for @q, url: search_movies_path do |f| %>
-              <%= render partial: "shared/search_form", locals: {f: f} %>
+              <%= render partial: "shared/search_movie", locals: {f: f} %>
             <% end %>
 
           <% elsif controller_name == "users"%>
             <%= search_form_for @q, url: search_user_path(@user) do |f| %>
-              <%= render partial: "shared/search_form", locals: {f: f} %>
+              <%= render partial: "shared/search_movie", locals: {f: f} %>
             <% end %>
           <% end %>
         </div>
