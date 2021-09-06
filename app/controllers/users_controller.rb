@@ -2,11 +2,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :search, :get_image_url]
   before_action :get_image_url
   before_action :search_movie, only: [:show, :search]
+  before_action :movie_count, only: [:show, :search]
 
 
   def show
     @movies = @user.movies.order("created_at DESC")
-    movie_count
   end
 
   def search

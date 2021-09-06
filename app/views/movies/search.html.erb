@@ -1,7 +1,8 @@
-<%= render partial:"shared/header" %>
+<%= render partial:"shared/main_header" %>
+<%= render partial:"movie_header" %>
 
 <div class = "movie-contents movie-contents-background">
-  <div class = "movie-contents-title">
+  <div class = "search-content-list">
   
   <% if params[:q][:movie_title_cont].present? %>
     "<%= params[:q][:movie_title_cont] %>"

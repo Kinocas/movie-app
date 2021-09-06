@@ -4,57 +4,59 @@
 }
 .main-header-wrap{
   width: 80%;
-  height: 100px;
+  height: 50px;
   margin: 0 auto;
+  background-color: white;
 }
 .header-top{
   display: flex;
   justify-content: space-between;
-  height: 50%;
   padding: 5px 15px;
-  background-color: white;
 }
+
+
 .header-left{
-  font-size: 25px;
-}
-.header-title{
-  color: black;
-  font-weight: 800;
-  text-shadow: 2px 3px 2px cadetblue;
-}
-
-.header-right{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
   list-style: none;
-  width: 200px;
-}
-.user-nickname,.logout, .login, .sign-up{
-  padding: 5px 10px;
-  color: white;
-  background-color: rgb(40, 95, 197);
-}
-
-.header-bottom{
-  background-color: rgb(245, 180, 180);
-  height: 50%;
-  padding: 5px 15px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.list-left{
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  width: 250px;
+  width: 30%;
   align-items: center;
+  
 }
+
 .chat-room, .new-movie{
   color: black;
   background-color: white;
   padding: 5px 15px;
   border: 1px solid black;
+  margin-right: 10px;
 }
+
+.header-center{
+  width: 30%;
+  text-align: center;
+}
+.header-title{
+  color: black;
+  font-weight: 800;
+  text-shadow: 2px 3px 2px cadetblue;
+  font-size: 25px;
+}
+
+.header-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  width: 30%;
+}
+.user-nickname,.logout, .login, .sign-up{
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(40, 95, 197);
+  margin-left: 10px;
+}
+
+
+
 

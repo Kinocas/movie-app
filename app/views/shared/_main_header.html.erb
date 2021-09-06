@@ -1,0 +1,28 @@
+<header class = "main-header">
+  <div class = "main-header-wrap">
+    <div class="header-top">
+
+      <ul class="header-left">
+        <% if user_signed_in?%>
+          <li><%= link_to "新規作成", new_movie_path, class:"new-movie" %></li>
+          <li><%= link_to "チャットルーム", "", class:"chat-room"%></li>
+        <% end %>
+      </ul>
+      
+      <div class = "header-center">
+        <%= link_to "MovieApp", root_path, class: "header-title"%>
+      </div>
+      
+      <ul class='header-right'>
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li> 
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <% end %>
+      </ul>
+      
+    </div>
+  </div>
+</header>

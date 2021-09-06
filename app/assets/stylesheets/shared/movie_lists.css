@@ -3,7 +3,7 @@
   background-color: wheat;
 }
 .user-contents-background{
-  background-color: rgb(188, 228, 255);
+  background-color: wheat;
 }
 
 /*一覧表示の設定*/
@@ -12,16 +12,12 @@
   height: calc(100vh - 100px);
   overflow: scroll;
   margin: 0 auto;
+  padding: 5px 40px;
 }
-.movie-contents-title{
-  font-size: 25px;
-  text-align: center;
-  padding: 10px;
-}
+
 .movie-lists{
   display: flex;
   flex-wrap: wrap;
-  padding: 0 50px;
 }
 
 .movie-list{

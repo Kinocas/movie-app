@@ -1,0 +1,38 @@
+/**movieの一覧**/
+.movie_header{
+  background-color: rgb(245, 180, 180);
+}
+/**userの一覧**/
+.user_header{
+  background-color: rgb(188, 228, 255);
+}
+
+/*共通のサブヘッダー*/
+.sub-header{
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-header-left{
+  width: 30%;
+}
+.sub-header-center{
+  width: 30%;
+  text-align: center;
+}
+.sub-header-title{
+  font-size: 25px;
+  padding: 10px;
+}
+
+.sub-header-right{
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+

@@ -1,0 +1,25 @@
+<div class="sub-header movie_header">
+  <div class="sub-header-left">
+    <div class = "">
+      なんか
+    </div>
+  </div>
+
+  <div class="sub-header-center">
+    <div class = "sub-header-title">
+      投稿一覧
+    </div>
+  </div>
+  
+  <div class="sub-header-right">
+    <div class = "search-wrap">
+      <div class="search-text" id="search-button">検索欄</div>
+      <div class = "search-form hidden" id="search-pull-down" >
+          <%= search_form_for @q, url: search_movies_path do |f| %>
+            <%= render partial: "shared/search_movie", locals: {f: f} %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+  
+</div>

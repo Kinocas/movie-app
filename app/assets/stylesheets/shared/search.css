@@ -6,8 +6,7 @@
   text-align: center;
   background-color: white;
   border: 1px solid black;
-  margin-top: 7px;
-  margin-left: auto;
+  margin-left: 10px;
 }
 .hidden{
   display: none;
