@@ -27,6 +27,7 @@
 }
 .movie-detail-table{
   width: 50%;
+  border-collapse:collapse;
 }
 .detail-item{
   width: 20%;

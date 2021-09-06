@@ -9,7 +9,10 @@ require("@rails/activestorage").start()
 require("channels")
 require("../randomImg")
 require("../searchBox")
+require("../countBox")
+require("../yearSelect")
 require('jquery')
+import("chartkick/chart.js")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
