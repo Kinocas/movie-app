@@ -11,6 +11,7 @@ require("../randomImg")
 require("../searchBox")
 require("../countBox")
 require("../yearSelect")
+require("../release")
 require('jquery')
 import("chartkick/chart.js")
 

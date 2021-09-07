@@ -1,7 +1,15 @@
 <div class="sub-header user_header">
   <div class="sub-header-left">
     <div class = "">
-      
+      <div id="release-status" style="display: none;"><%=@release%></div>
+      <%=form_with(url: user_path(current_user), local: true, method: :get, id: "release-form") do |f|%>
+        <%=f.radio_button :release, "すべて" %>
+        <%=f.label :release ,"すべて"%>
+        <%=f.radio_button :release, "公開"%>
+        <%=f.label :release, "公開", value: "公開"%>
+        <%=f.radio_button :release, "非公開"%>
+        <%=f.label :release, "非公開", value: "非公開"%>
+      <%end%>
     </div>
   </div>
 
@@ -16,7 +24,7 @@
     <div class="movie-count-wrap" id="movie-count">
       <div class="movie-count-text" id="count-button">合計数</div>
       <div class= "movie-count-box", id ="count-box">
-        <%= form_with(url: user_path(current_user), local: true, method: :get, id: "select-year-form") do |f| %>
+        <%= form_with(url: "", local: true, method: :get, id: "select-year-form") do |f| %>
           <%= f.select :num, options_for_select([[Time.now.years_ago(0).year, 0], [Time.now.years_ago(1).year, 1], [Time.now.years_ago(2).year, 2], [Time.now.years_ago(3).year, 3]]),
           {include_blank: '年を選んでください'} ,class: "select-year-pull"%>
         <% end %>
