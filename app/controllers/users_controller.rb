@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :search, :get_image_url]
+  before_action :authenticate_user!, only: [:show, :search]
+  before_action :set_user, only: [:show, :search, :user_to_index, :get_image_url]
+  before_action :user_to_index, only: [:show, :search]
   before_action :get_image_url
   before_action :search_movie, only: [:show, :search]
   before_action :movie_count, only: [:show, :search]
@@ -30,6 +32,12 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+  end
+
+  def user_to_index
+    unless current_user.id == @user.id
+      redirect_to movies_path
+    end
   end
   
   def search_movie
