@@ -5,7 +5,7 @@
       <ul class="header-left">
         <% if user_signed_in?%>
           <li><%= link_to "新規作成", new_movie_path, class:"new-movie" %></li>
-          <li><%= link_to "チャットルーム", "", class:"chat-room"%></li>
+          <li><%= link_to "チャットルーム", rooms_path, class:"chat-room"%></li>
         <% end %>
       </ul>
       

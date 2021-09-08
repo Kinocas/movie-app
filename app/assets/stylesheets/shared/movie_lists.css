@@ -5,14 +5,17 @@
 .user-contents-background{
   background-color: wheat;
 }
+.room-contents-background{
+  background-color: wheat;
+}
 
 /*一覧表示の設定*/
-.movie-contents{
+.main-contents{
   width: 80%;
   height: calc(100vh - 100px);
   overflow: scroll;
   margin: 0 auto;
-  padding: 5px 40px;
+  padding: 10px 40px;
 }
 
 .movie-lists{

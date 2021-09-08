@@ -1,0 +1,24 @@
+<%= render partial:"shared/main_header" %>
+<%= render partial:"room_header" %>
+
+<div class = "main-contents room-contents-background">
+  <ul class="room-lists">
+    <% @rooms.each do |room| %>
+      <li class="room-list">
+        <%=link_to  "" ,class: "room-list-link" do %>
+          <div class="room-name">
+            <%= room.room_name %>
+          </div>
+          <div class="room-purpose">
+            <span class = "room-purpose-item">目的：</span>
+            <%= room.purpose %>
+          </div>
+          <div class="room-created-time">
+            <span class = "list-room-item">日時：</span>
+            <%= room.created_at %>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

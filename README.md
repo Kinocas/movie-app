@@ -71,6 +71,7 @@ VSCode
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
 | room_name | string     | null: false                    |
+| purpose   | text       | null: false                    |
 | user      | references | null: false, foreign_key: true |
 
 ### Association

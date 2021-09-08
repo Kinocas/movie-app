@@ -1,0 +1,31 @@
+<%= render partial:"shared/form_header"%>
+
+<div class="room-form-header">
+  <h1 class="room-form-header-text">ルーム作成</h1>
+
+  <%=form_with model: @room, class: "room-registration-main", local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="room-form-group">
+      <div class="room-form-text-wrap">
+        <label class="room-form-text">ルーム名</label>
+        <span class="room-indispensable">必須</span>
+      </div>
+      <%= f.text_area :room_name, class:"input-room-name", id:"room-name", placeholder:"例) ルーム名", maxlength:"40", autofocus: true %>
+    </div>
+
+    <div class="room-form-group">
+      <div class="room-form-text-wrap">
+        <label class="room-form-text">目的</label>
+        <span class="room-indispensable">必須</span>
+      </div>
+      <%= f.text_area :purpose, class:"input-purpose", id:"purpose", placeholder:"例) 〇〇について語りたい", maxlength:"100" %>
+    </div>
+
+    <div class="room-submit-btn">
+      <%= f.submit "新規作成" , class:"room-submit-btn-text" %>
+    </div>
+
+  <% end %>
+</div>

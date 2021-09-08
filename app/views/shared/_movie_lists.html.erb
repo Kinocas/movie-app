@@ -1,7 +1,7 @@
-<ul class = "movie-lists">
-  <% if movies.empty? %>
-      <div>投稿されたコンテンツがありません</div>
-  <% else %>
+<% if movies.empty? %>
+    <div>投稿されたコンテンツがありません</div>
+<% else %>
+  <ul class = "movie-lists">
     <% movies.each do |movie| %>
       <li class= "movie-list">
         <%= link_to movie_path(movie) ,class: "movie-list-link" do %>
@@ -32,5 +32,5 @@
         <% end %>
       </li>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+<% end %>
