@@ -76,6 +76,7 @@ VSCode
 
 ### Association
 - belongs_to :user
+- has_many :chats
 
 ## chats テーブル
 
@@ -87,4 +88,4 @@ VSCode
 
 ### Association
 - belongs_to :user
-- belongs_to :chat
+- belongs_to :room

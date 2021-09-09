@@ -1,0 +1,26 @@
+<%= render partial:"shared/main_header" %>
+<%= render partial:"chat_header" %>
+
+<div class = "main-contents chat-contents-background">
+  
+  <ul class="chat-lists">
+    <% @chats.each do |chat| %>
+      <li class="chat-list">
+        <div class="chat-box">
+          <div class="chat-text"><%= chat.chat %></div>
+          <div class="chat-info">
+            <div class="chat-nickname"><%= chat.user.nickname %></div>
+            <div class="chat-date"><%= chat.created_at%></div>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="chat-form-wrap">
+    <%= form_with model:[@room, @chat], local: true ,class: "chat-form" do |f| %>
+      <%=f.text_area :chat, class: "input-chat" %>
+      <%=f.submit "投稿", class: "submit-chat"%>
+    <% end %>
+  </div>
+</div>

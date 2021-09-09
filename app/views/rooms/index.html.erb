@@ -5,7 +5,7 @@
   <ul class="room-lists">
     <% @rooms.each do |room| %>
       <li class="room-list">
-        <%=link_to  "" ,class: "room-list-link" do %>
+        <%=link_to room_chats_path(room) ,class: "room-list-link" do %>
           <div class="room-name">
             <%= room.room_name %>
           </div>

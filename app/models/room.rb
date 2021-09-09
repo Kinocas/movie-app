@@ -5,5 +5,6 @@ class Room < ApplicationRecord
   end
 
   belongs_to :user
+  has_many :chats
 
 end

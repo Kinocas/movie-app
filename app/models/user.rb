@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true 
 
   has_many :movies
-  #has_many :rooms
-  #has_many :chats
+  has_many :rooms
+  has_many :chats
 
 end

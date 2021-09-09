@@ -18,6 +18,10 @@
   border: 1px solid black;
   margin-right: 10px;
 }
+/**room一覧**/
+.chat_header{
+  background-color: rgb(221, 223, 121);
+}
 
 /*共通のサブヘッダー*/
 .sub-header{

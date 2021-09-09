@@ -8,6 +8,9 @@
 .room-contents-background{
   background-color: wheat;
 }
+.chat-contents-background{
+  background-color: wheat;
+}
 
 /*一覧表示の設定*/
 .main-contents{
@@ -15,7 +18,7 @@
   height: calc(100vh - 100px);
   overflow: scroll;
   margin: 0 auto;
-  padding: 10px 40px;
+  padding: 0px 40px;
 }
 
 .movie-lists{
