@@ -2,18 +2,19 @@
 .user-nickname,.logout, .login, .sign-up{
   text-decoration: none;
 }
-.main-header-wrap{
+.main-header{
   width: 80%;
-  height: 50px;
   margin: 0 auto;
   background-color: white;
 }
-.header-top{
+.main-header-wrap{
+  height: 50px;
   display: flex;
   justify-content: space-between;
-  padding: 5px 15px;
+  padding: 8px 15px;
+  background: url("/images/film.png") repeat-x;
+  background-size: contain; 
 }
-
 
 .header-left{
   display: flex;
@@ -33,10 +34,13 @@
 }
 
 .header-center{
-  width: 30%;
+  width: 10%;
+  height: 100%;
   text-align: center;
+  background-color: white;
 }
 .header-title{
+  
   color: black;
   font-weight: 800;
   text-shadow: 2px 3px 2px cadetblue;

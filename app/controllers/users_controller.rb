@@ -36,7 +36,6 @@ class UsersController < ApplicationController
   end
   
   def search_movie
-    #binding.pry
     @q = Movie.where(user_id: current_user.id).ransack(params[:q])
   end
 

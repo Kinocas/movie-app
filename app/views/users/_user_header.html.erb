@@ -1,14 +1,16 @@
 <div class="sub-header user_header">
   <div class="sub-header-left">
-    <div class = "">
-      <div id="release-status" style="display: none;"><%=@release%></div>
-      <%=form_with(url: user_path(current_user), local: true, method: :get, id: "release-form") do |f|%>
-        <%=f.radio_button :release, "すべて" %>
-        <%=f.label :release ,"すべて", value: "すべて"%>
-        <%=f.radio_button :release , "公開"%>
-        <%=f.label :release, "公開", value: "公開"%>
-        <%=f.radio_button :release, "非公開"%>
-        <%=f.label :release, "非公開", value: "非公開"%>
+    <div class = "release-status-wrap">
+      <% if controller.action_name =="show"%>
+        <div id="release-status" style="display: none;"><%=@release%></div>
+        <%=form_with(url: user_path(current_user), local: true, method: :get, id: "release-form") do |f|%>
+          <%=f.radio_button :release, "すべて" %>
+          <%=f.label :release ,"すべて", value: "すべて"%>
+          <%=f.radio_button :release , "公開"%>
+          <%=f.label :release, "公開", value: "公開"%>
+          <%=f.radio_button :release, "非公開"%>
+          <%=f.label :release, "非公開", value: "非公開"%>
+        <%end%>
       <%end%>
     </div>
   </div>
