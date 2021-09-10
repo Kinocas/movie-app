@@ -4,8 +4,8 @@
       <div id="release-status" style="display: none;"><%=@release%></div>
       <%=form_with(url: user_path(current_user), local: true, method: :get, id: "release-form") do |f|%>
         <%=f.radio_button :release, "すべて" %>
-        <%=f.label :release ,"すべて"%>
-        <%=f.radio_button :release, "公開"%>
+        <%=f.label :release ,"すべて", value: "すべて"%>
+        <%=f.radio_button :release , "公開"%>
         <%=f.label :release, "公開", value: "公開"%>
         <%=f.radio_button :release, "非公開"%>
         <%=f.label :release, "非公開", value: "非公開"%>
@@ -56,6 +56,13 @@
       <div class="search-text" id="search-button">検索欄</div>
       <div class = "search-form hidden" id="search-pull-down" >
         <%= search_form_for @q, url: search_user_path(@user) do |f| %>
+          <%=f.radio_button :release_eq, "" %>
+          <%=f.label :release_eq ,"すべて", value: ""%>
+          <%=f.radio_button :release_eq , "公開"%>
+          <%=f.label :release_eq, "公開", value: "公開"%>
+          <%=f.radio_button :release_eq, "非公開"%>
+          <%=f.label :release_eq, "非公開", value: "非公開"%>
+          <br>
           <%= render partial: "shared/search_movie", locals: {f: f} %>
         <% end %>
       </div>
