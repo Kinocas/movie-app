@@ -1,5 +1,4 @@
 class MoviesController < ApplicationController
-  before_action :get_image_url
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_movie, only: [:show, :edit, :update, :destory, :move_to_index]
   before_action :move_to_index, only: [:edit, :update, :destory]
@@ -60,10 +59,6 @@ class MoviesController < ApplicationController
     unless current_user.id == @movie.user_id
       redirect_to action: :index
     end
-  end
-
-  def get_image_url
-    @image_url = Movie.where.not(image_url: "").pluck(:image_url)
   end
 
   def search_movie
