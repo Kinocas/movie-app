@@ -1,12 +1,9 @@
-function searchBox(){
-  const searchButton = document.getElementById("search-button");
-  const searchPullDown = document.getElementById("search-pull-down");
-  searchButton.addEventListener('click', ()=>{
-    if (searchPullDown.getAttribute("style") == "display: block;"){
-      searchPullDown.removeAttribute("style","display: block;")
+$(function(){
+  $("#search-button").click(function(){
+    if ($("#search-pull-down").hasClass("hidden")){
+      $("#search-pull-down").removeClass("hidden");
     } else {
-      searchPullDown.setAttribute("style","display: block;")
+      $("#search-pull-down").addClass("hidden");
     }
   });
-};
-window.addEventListener("load", searchBox);
+});

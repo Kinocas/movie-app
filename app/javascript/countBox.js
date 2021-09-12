@@ -1,12 +1,9 @@
-function countBox(){
-  const countButton = document.getElementById("count-button");
-  const countBox = document.getElementById("count-box");
-  countButton.addEventListener('click', ()=>{
-    if (countBox.getAttribute("style") == "display: block;"){
-      countBox.removeAttribute("style","display: block;")
+$(function(){
+  $("#count-button").click(function(){
+    if ($("#count-box").hasClass("hidden")){
+      $("#count-box").removeClass("hidden");
     } else {
-      countBox.setAttribute("style","display: block;")
+      $("#count-box").addClass("hidden");
     }
   });
-};
-window.addEventListener("load", countBox);
+});

@@ -64,9 +64,6 @@
 }
 
 /*検索欄*/
-.hidden{
-  display: none;
-}
 .search-form{
   width: 270px;
   background-color: rgb(255, 138, 95);
