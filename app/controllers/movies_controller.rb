@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
   before_action :search_movie
 
   def index
-    @movies = Movie.where(release: "公開").includes(:user).order("created_at DESC")
+    @movies = Movie.where(release: "公開").includes(:user).order("created_at DESC").page(params[:page]).per(25)
   end
 
   def new
@@ -42,7 +42,7 @@ class MoviesController < ApplicationController
   end
 
   def search
-    @movies = @q.result.order("created_at DESC")
+    @movies = @q.result.order("created_at DESC").page(params[:page]).per(25)
   end
 
   private

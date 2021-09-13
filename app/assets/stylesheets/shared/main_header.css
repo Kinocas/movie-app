@@ -22,7 +22,7 @@
   list-style: none;
   width: 30%;
   align-items: center;
-  
+  margin: 0px;
 }
 
 .chat-room, .new-movie{
@@ -56,6 +56,7 @@
   align-items: center;
   list-style: none;
   width: 30%;
+  margin: 0;
 }
 .user-nickname,.logout, .login, .sign-up{
   padding: 5px 10px;

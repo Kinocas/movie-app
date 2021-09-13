@@ -14,3 +14,10 @@ ja:
       room:
         room_name: ルーム名
         purpose: 目的
+  views:
+    pagination:
+      first: "&#8810"
+      last: "&#8811;"
+      previous: "&#60"
+      next: "&#62"
+      truncate: "..."

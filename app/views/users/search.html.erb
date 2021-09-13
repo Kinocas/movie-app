@@ -31,4 +31,5 @@
     検索結果  <%= @movies.length%>件
   </div>
   <%= render partial:"shared/movie_lists", locals: {movies: @movies} %>
+  <%= paginate @movies %>
 </div>

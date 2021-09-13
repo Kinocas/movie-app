@@ -8,19 +8,19 @@ class UsersController < ApplicationController
 
   def show
     if params[:release]== "公開"
-      @movies = @user.movies.where(release: "公開").order("created_at DESC")
+      @movies = @user.movies.where(release: "公開").order("created_at DESC").page(params[:page]).per(25)
       @release = "公開"
     elsif params[:release]== "非公開"
-      @movies = @user.movies.where(release: "非公開").order("created_at DESC")
+      @movies = @user.movies.where(release: "非公開").order("created_at DESC").page(params[:page]).per(25)
       @release = "非公開"
     else
-      @movies = @user.movies.order("created_at DESC")
+      @movies = @user.movies.order("created_at DESC").page(params[:page]).per(25)
       @release = "すべて"
     end
   end
 
   def search
-    @movies = @q.result.order("created_at DESC")
+    @movies = @q.result.order("created_at DESC").page(params[:page]).per(25)
   end
 
   private
