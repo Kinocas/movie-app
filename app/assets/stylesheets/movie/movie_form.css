@@ -3,7 +3,7 @@
   background-color: wheat;
   width: 50%;
   margin: 0 auto;
-  padding: 30px 50px;
+  padding: 20px 0px 10px 0px;
   border-radius: 100px;
 }
 .movie-form-header-text{
@@ -15,7 +15,7 @@
   margin: 0 auto;
 }
 .movie-form-group{
-  margin: 30px 0px;
+  margin: 15px 0px;
 }
 .movie-form-text-wrap{
   margin: 5px 0px;
@@ -26,6 +26,13 @@
 }
 .movie-indispensable{
   background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+.movie-optional{
+  background-color: gray;
   color: white;
   padding: 5px 10px;
   font-size: 12px;
