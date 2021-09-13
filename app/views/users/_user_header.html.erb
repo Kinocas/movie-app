@@ -24,7 +24,7 @@
   <div class="sub-header-right">
     
     <div class="movie-count-wrap" id="movie-count">
-      <div class="movie-count-text" id="count-button">合計数</div>
+      <button class="movie-count-text" id="count-button">合計数</button>
       <div class= "movie-count-box hidden", id ="count-box">
         <%= form_with(url: "", local: true, method: :get, id: "select-year-form") do |f| %>
           <%= f.select :num, options_for_select([[Time.now.years_ago(0).year, 0], [Time.now.years_ago(1).year, 1], [Time.now.years_ago(2).year, 2], [Time.now.years_ago(3).year, 3]]),
@@ -55,7 +55,7 @@
     </div>
   
     <div class = "search-wrap">
-      <div class="search-text" id="search-button">検索欄</div>
+      <button class="search-text" id="search-button">検索欄</button>
       <div class = "search-form hidden" id="search-pull-down" >
         <%= search_form_for @q, url: search_user_path(@user) do |f| %>
           <%=f.radio_button :release_eq, "" %>
