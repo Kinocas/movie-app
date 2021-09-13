@@ -11,7 +11,8 @@ require("../searchBox")
 require("../countBox")
 require("../yearSelect")
 require("../release")
-require('jquery')
+window.$ = window.jQuery = require('jquery'); 
+require("packs/raty")
 import("chartkick/chart.js")
 
 
