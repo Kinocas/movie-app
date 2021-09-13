@@ -7,7 +7,10 @@
     </h1>
   </div>
 
-  <%= render 'shared/error_messages', model: f.object %>
+  <div class='login-flash-message'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
 
   <div class="user-form-group">
     <div class='user-form-text-wrap'>

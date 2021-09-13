@@ -2,3 +2,15 @@ ja:
   time:
     formats:
       default: "%Y/%m/%d %H:%M"
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      movie:
+        movie_title: タイトル
+        thought: 感想
+        genre_id: ジャンル
+        evaluation: 評価
+      room:
+        room_name: ルーム名
+        purpose: 目的
