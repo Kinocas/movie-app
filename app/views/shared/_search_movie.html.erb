@@ -11,8 +11,8 @@
 <br>
 
 <%= f.label :created_at, "投稿日",class: "search-title"%>
-<%= f.date_field :created_at_gteq, class: "search-evaluation"%>
+<%= f.date_field :created_at_gteq, class: "search-date"%>
 <span>~</span>
-<%= f.date_field :created_at_lteq_end_of_day, class: "search-evaluation" %>
+<%= f.date_field :created_at_lteq_end_of_day, class: "search-date" %>
 
 <%= f.submit '検索' ,class: "search-submit"%>

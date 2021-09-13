@@ -91,7 +91,7 @@
   padding: 5px 10px;
   margin: 5px 0px;
 }
-.search-evaluation{
+.search-evaluation, .search-date{
   height: 30px;
   background-color: rgb(218, 218, 218);
   border: 1px solid black;
