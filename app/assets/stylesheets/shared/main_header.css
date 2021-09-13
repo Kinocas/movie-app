@@ -33,6 +33,10 @@
   margin-right: 10px;
 }
 
+.chat-room:hover, .new-movie:hover{
+  background-color: rgb(255, 236, 129);
+}
+
 .header-center{
   width: 10%;
   height: 100%;
@@ -40,7 +44,6 @@
   background-color: white;
 }
 .header-title{
-  
   color: black;
   font-weight: 800;
   text-shadow: 2px 3px 2px cadetblue;
@@ -60,7 +63,6 @@
   background-color: rgb(40, 95, 197);
   margin-left: 10px;
 }
-
-
-
-
+.user-nickname:hover, .logout:hover, .login:hover, .sign-up:hover{
+  background-color: rgb(95, 168, 252);
+}
