@@ -1,5 +1,18 @@
 <%= render partial:"shared/main_header" %>
-<%= render partial:"movie_header" %>
+<div class="sub-header show_header">
+  <div class="sub-header-left">
+  </div>
+
+  <div class="sub-header-center">
+    <div class = "sub-header-title">
+      詳細内容
+    </div>
+  </div>
+  
+  <div class="sub-header-right">
+  </div>
+  
+</div>
 
 <div class = "movie-detail-wrap">
   <div class = "movie-detail-title">
@@ -32,7 +45,7 @@
           <td class="detail-value"><%= @movie.thought%></td>
         </tr>
         <tr>
-          <th class="detail-item">感想</th>
+          <th class="detail-item">公開</th>
           <td class="detail-value"><%= @movie.release%></td>
         </tr>
       </tbody>

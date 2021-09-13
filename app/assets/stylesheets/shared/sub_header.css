@@ -22,6 +22,10 @@
 .chat_header{
   background-color: rgb(221, 223, 121);
 }
+/**詳細内容**/
+.show_header{
+  background-color: rgb(159, 236, 159);
+}
 
 /*共通のサブヘッダー*/
 .sub-header{
