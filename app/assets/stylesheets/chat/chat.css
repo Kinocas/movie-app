@@ -46,3 +46,6 @@
   background-color: rgb(78, 78, 226);
   border-radius: 0 10px 10px 0;
 }
+.field_with_errors {
+  display: contents;
+}
