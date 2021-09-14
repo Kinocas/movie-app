@@ -193,3 +193,7 @@
 .movie-count-chart{
   border: 1px solid black;
 }
+
+#search-pull-down,#count-box{
+  display: none;
+}

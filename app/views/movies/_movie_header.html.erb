@@ -14,7 +14,7 @@
   <div class="sub-header-right">
     <div class = "search-wrap">
       <button class="search-text" id="search-button">検索欄</button>
-      <div class = "search-form hidden" id="search-pull-down" >
+      <div class = "search-form" id="search-pull-down" >
           <%= search_form_for @q, url: search_movies_path do |f| %>
             <%= render partial: "shared/search_movie", locals: {f: f} %>
           <% end %>
