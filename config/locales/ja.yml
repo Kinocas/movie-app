@@ -11,6 +11,8 @@ ja:
         thought: 感想
         genre_id: ジャンル
         evaluation: 評価
+        release: 公開
+        user: ユーザー
       room:
         room_name: ルーム名
         purpose: 目的
