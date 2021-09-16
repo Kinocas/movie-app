@@ -14,13 +14,49 @@
 
 /*一覧表示の設定*/
 .main-contents{
+  position: relative;
   width: 80%;
   height: calc(100vh - 100px);
   overflow: scroll;
   margin: 0 auto;
   padding: 0px 40px;
 }
+.curtain{
+  position: absolute;
+  z-index: 100;
+  background-image: url("/images/background.png");
+  height: 100vh;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover; 
+  cursor: pointer;
+}
+.curtain-text{
+  font-family: serif;
+  font-style: italic;
+  margin: auto 0px;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 300px;
+}
+.curtain-click{
+  animation: flash 1.5s linear infinite;
+  
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+}
+@keyframes flash {
+  0%,100% {
+    opacity: 1;
+  }
 
+  50% {
+    opacity: 0;
+  }
+}
 .movie-lists{
   display: flex;
   flex-wrap: wrap;

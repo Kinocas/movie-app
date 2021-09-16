@@ -1,5 +1,14 @@
+<% if !user_signed_in? %>
+  <div class="curtain">
+    <div class="curtain-wrap">
+      <div class="curtain-text">
+        あなたの映画共有しませんか？
+      </div>
+      <p class="curtain-click">画面をクリック</p>
+    </div>
+  </div>
+<% end%>
 <%= render partial:"shared/main_header" %>
-
 <%= render partial:"movie_header" %>
 
 <div class = "main-contents movie-contents-background">
