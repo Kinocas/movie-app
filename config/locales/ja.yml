@@ -16,6 +16,11 @@ ja:
       room:
         room_name: ルーム名
         purpose: 目的
+        user: ユーザー
+      chat:
+        chat: チャット
+        room: ルーム
+        user: ユーザー
   views:
     pagination:
       first: "&#8810"
