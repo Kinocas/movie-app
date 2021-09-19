@@ -58,7 +58,7 @@
 .movie-lists{
   display: flex;
   flex-wrap: wrap;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 
 .movie-list{
@@ -66,11 +66,27 @@
   margin: 10px;
   padding: 5px;
   width: calc((100% - 100px)/5);
-  height: calc((100vh - 100px)/1.5);
+  height: 600px;
   list-style: none;
   border: 1px solid black;
   overflow: scroll;
 }
+@media (max-width:1500px){
+  .movie-list{
+    width: calc((100% - 80px)/4);
+  }
+}
+@media (max-width:1250px){
+  .movie-list{
+    width: calc((100% - 60px)/3);
+  }
+}
+@media (max-width: 1000px) {
+  .movie-list{
+    width: calc((100% - 40px)/2);
+  }
+}
+
 .movie-list-link{
   text-decoration: none;
 }

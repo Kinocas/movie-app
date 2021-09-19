@@ -20,7 +20,7 @@
   display: flex;
   justify-content: flex-start;
   list-style: none;
-  width: 30%;
+  width: 40%;
   align-items: center;
   margin: 0px;
 }
@@ -38,7 +38,7 @@
 }
 
 .header-center{
-  width: 10%;
+  width: 15%;
   height: 100%;
   text-align: center;
   background-color: white;
@@ -55,7 +55,7 @@
   justify-content: flex-end;
   align-items: center;
   list-style: none;
-  width: 30%;
+  width: 40%;
   margin: 0;
 }
 .user-nickname,.logout, .login, .sign-up{
