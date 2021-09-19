@@ -1,15 +1,15 @@
 /*background-color*/
 .movie-contents-background{
-  background-color: wheat;
+  background-color: white;
 }
 .user-contents-background{
-  background-color: wheat;
+  background-color: white;
 }
 .room-contents-background{
-  background-color: wheat;
+  background-color: white;
 }
 .chat-contents-background{
-  background-color: wheat;
+  background-color: white;
 }
 
 /*一覧表示の設定*/
@@ -19,7 +19,6 @@
   height: calc(100vh - 100px);
   overflow: scroll;
   margin: 0 auto;
-  padding: 0px 40px;
 }
 .curtain{
   position: absolute;
@@ -42,7 +41,6 @@
 }
 .curtain-click{
   animation: flash 1.5s linear infinite;
-  
   font-size: 20px;
   color: white;
   text-align: center;
@@ -60,6 +58,7 @@
 .movie-lists{
   display: flex;
   flex-wrap: wrap;
+  padding: 0 40px;
 }
 
 .movie-list{
