@@ -1,7 +1,7 @@
 .chat-lists{
   list-style: none;
   padding: 10px;
-  background-color: white;
+  background-color: rgb(247, 238, 224);
   height: calc(100% - 100px);
   overflow: scroll;
   width: 80%;
