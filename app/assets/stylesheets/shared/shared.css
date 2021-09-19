@@ -5,6 +5,12 @@
   background-position: center center;
   background-size: cover; 
 }
+.footer{
+  text-align: center;
+  font-size: 15px;
+  background-color: wheat;
+  padding: 5px;
+}
 
 .hidden{
   display: none;

@@ -2,8 +2,7 @@
 <%= render partial:"user_header" %>
 
 <div class = "main-contents user-contents-background">
-
   <%= render partial:"shared/movie_lists" , locals: {movies: @movies} %>
   <%= paginate @movies %>
-  
+  <%= render partial:"shared/footer" %>
 </div>
