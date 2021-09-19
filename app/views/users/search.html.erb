@@ -2,31 +2,31 @@
 <%= render partial:"user_header" %>
 
 <div class = "main-contents user-contents-background">
-  <div class = "movie-contents-title">
+  <div class = "search-content-list">
     
-  <% if params[:q][:movie_title_cont].present? %>
-    "<%= params[:q][:movie_title_cont] %>"
-  <% end %>
+    <% if params[:q][:movie_title_cont].present? %>
+      "<%= params[:q][:movie_title_cont] %>"
+    <% end %>
 
-  <% if params[:q][:genre_id_eq].present? %>
-    "<%= Genre.find(params[:q][:genre_id_eq]).name %>"
-  <% end %>
+    <% if params[:q][:genre_id_eq].present? %>
+      "<%= Genre.find(params[:q][:genre_id_eq]).name %>"
+    <% end %>
 
-  <% if params[:q][:evaluation_gteq].present? && params[:q][:evaluation_lteq].present? %>
-    "<%= params[:q][:evaluation_gteq] %> ~ <%= params[:q][:evaluation_lteq] %>"
-  <% elsif params[:q][:evaluation_gteq].present? %>
-    "<%= params[:q][:evaluation_gteq] %> ~"
-  <% elsif params[:q][:evaluation_lteq].present? %>
-    "~ <%= params[:q][:evaluation_lteq] %>"
-  <% end %>
+    <% if params[:q][:evaluation_gteq].present? && params[:q][:evaluation_lteq].present? %>
+      "<%= params[:q][:evaluation_gteq] %> ~ <%= params[:q][:evaluation_lteq] %>"
+    <% elsif params[:q][:evaluation_gteq].present? %>
+      "<%= params[:q][:evaluation_gteq] %> ~"
+    <% elsif params[:q][:evaluation_lteq].present? %>
+      "~ <%= params[:q][:evaluation_lteq] %>"
+    <% end %>
 
-  <% if params[:q][:created_at_gteq].present? && params[:q][:created_at_lteq].present? %>
-    "<%= params[:q][:created_at_gteq] %>~ <%= params[:q][:created_at_lteq] %>"
-  <% elsif  params[:q][:created_at_gteq].present? %>
-    "<%= params[:q][:created_at_gteq] %> ~"
-  <% elsif params[:q][:created_at_lteq].present? %>
-    "~ <%= params[:q][:created_at_lteq] %>"
-  <% end %>
+    <% if params[:q][:created_at_gteq].present? && params[:q][:created_at_lteq].present? %>
+      "<%= params[:q][:created_at_gteq] %>~ <%= params[:q][:created_at_lteq] %>"
+    <% elsif  params[:q][:created_at_gteq].present? %>
+      "<%= params[:q][:created_at_gteq] %> ~"
+    <% elsif params[:q][:created_at_lteq].present? %>
+      "~ <%= params[:q][:created_at_lteq] %>"
+    <% end %>
 
     検索結果  <%= @movies.length%>件
   </div>
