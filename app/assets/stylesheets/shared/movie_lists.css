@@ -51,7 +51,7 @@
 .main-contents{
   position: relative;
   width: 80%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px - 30px);
   overflow: scroll;
   margin: 0 auto;
 }

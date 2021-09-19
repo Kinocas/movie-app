@@ -1,10 +1,9 @@
 .movie-detail-wrap{
   width: 80%;
   margin: 0 auto;
-  height: calc(100vh - 100px);
-  overflow: scroll;
+  height: calc(100vh - 100px - 30px);
   background-color: white;
-  
+  overflow: scroll;
 }
 .movie-detail-title{
   font-size: 25px;
