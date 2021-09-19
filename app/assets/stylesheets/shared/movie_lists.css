@@ -11,15 +11,7 @@
 .chat-contents-background{
   background-color: white;
 }
-
-/*一覧表示の設定*/
-.main-contents{
-  position: relative;
-  width: 80%;
-  height: calc(100vh - 100px);
-  overflow: scroll;
-  margin: 0 auto;
-}
+/*カーテン*/
 .curtain{
   position: absolute;
   z-index: 100;
@@ -54,6 +46,14 @@
   50% {
     opacity: 0;
   }
+}
+/*一覧表示の設定*/
+.main-contents{
+  position: relative;
+  width: 80%;
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  margin: 0 auto;
 }
 .movie-lists{
   display: flex;
